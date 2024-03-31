@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "poetry add pandas"
+version = "0.1.0"
+description = ""
+authors = ["Venkata <venkata.medabala@gfk.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.1"
+numpy = "^1.26.4"
+plotly = "^5.20.0"
+nbformat = "^5.10.3"
+scikit-learn = "^1.4.1.post1"
+pydantic = "^2.6.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
