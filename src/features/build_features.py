@@ -240,7 +240,6 @@ def precalc_risk_scores(df: pd.DataFrame, risk_columns: Dict[str, str]) -> pd.Da
     """
 
     for column, risk_score_name in risk_columns.items():
-
         if column in df.columns:
             fraud_events = (
                 df[df["is_fraud"] == 1].groupby(column)["transactionAmount"].count()

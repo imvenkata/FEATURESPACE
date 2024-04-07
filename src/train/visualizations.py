@@ -1,4 +1,29 @@
 import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+
+
+def plot_feature_importances(feature_importances, figsize=(10, 6)):
+    """
+    Creates a horizontal bar chart visualizing feature importances.
+
+    Args:
+        feature_importances (pandas.DataFrame): A DataFrame with columns
+            'Feature Id' (feature names) and 'Importances'.
+        figsize (tuple, optional): Size of the figure. Defaults to (10, 6).
+    """
+
+    # Extract feature names and their importances
+    feature_names = feature_importances["Feature Id"]
+    importances = feature_importances["Importances"]
+
+    # Plotting
+    plt.figure(figsize=figsize)
+    plt.barh(feature_names, importances, color="skyblue")
+    plt.xlabel("Importance")
+    plt.ylabel("Feature")
+    plt.title("Feature Importances")
+    plt.gca().invert_yaxis()
+    plt.show()
 
 
 def fraud_transactions_pie_chart(
@@ -89,14 +114,6 @@ def plot_performance_metrics(metrics, train_values, val_values, test_values):
     fig = go.Figure(data=[trace_train, trace_val, trace_test], layout=layout)
     fig.show()
 
-
-# Example Usage:
-metrics = ["Precision", "Recall", "F1 Score", "ROC AUC"]
-train_values = [0.63, 0.88, 0.77, 0.95]
-val_values = [0.49, 0.80, 0.61, 0.90]
-test_values = [0.30, 0.69, 0.42, 0.83]
-
-plot_performance_metrics(metrics, train_values, val_values, test_values)
 
 # Example Usage:
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import logging
-from typing import Tuple, Dict, List
+from typing import Tuple, List
 
 import pandas as pd
 from catboost import CatBoostClassifier
@@ -89,9 +89,7 @@ def prepare_data_for_modeling(
         ["merchant_risk_score", "zip_code_risk_score", "country_risk_score"]
     ] = test_features_data[
         ["merchant_risk_score", "zip_code_risk_score", "country_risk_score"]
-    ].fillna(
-        0
-    )
+    ].fillna(0)
 
     selected_columns = list(set(event_id + features + label))
     dev_features_data = dev_features_data[selected_columns]
@@ -262,7 +260,7 @@ def perform_grid_search(model, param_grid, X, y, cat_features=None):
 def save_model(model, filename):
     """Saves the CatBoost model to a file."""
     logger.info(f"Model saved to {filename}")
-    dump(best_model, f"{filename}.joblib")
+    dump(model, f"{filename}.joblib")
 
 
 # load model
