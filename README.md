@@ -36,7 +36,7 @@ Derived / Calculated Features
 - merchant_risk_score: A calculated risk score for each merchant, potentially based on fraud rates.
 - zip_code_risk_score: A calculated risk score for each merchant zipcode, potentially based on fraud rates.
 
-Planed but note implemented:
+Planned but not implemented:
 
 - distance between transaction location and the previous transaction location (approximate distance based on zipcodes)
 - Moving average of transaction frequency from the same account
