@@ -63,6 +63,7 @@ Note Implemented yet:
 
 **Directory Structure**
 
+```
 ├── README.md
 ├── data
 │ ├── precal
@@ -83,6 +84,8 @@ Note Implemented yet:
 │ ├── main.py
 │ ├── tests
 │ └── train
+
+```
 
 ## Setup
 
