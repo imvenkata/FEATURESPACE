@@ -34,8 +34,14 @@ Derived / Calculated Features
 - merchant_risk_score: A calculated risk score for each merchant, potentially based on fraud rates.
 - zip_code_risk_score: A calculated risk score for each merchant zipcode, potentially based on fraud rates.
 
-Research Notes:
+Planed but note implemented: 
+- distance between transaction location and the previous transaction location (approximate distance based on zipcodes)
+- Moving average of transaction frequency from the same account
+- Moving average of location difference between consecutive transactions from the same account
+- Moving standard deviation of transaction volume from the same account
+- Feature hashing for categorical data
 
+Research Notes:
 - Feature Engineering
 - Model: CatBoost
 - Data Splitting:
@@ -44,12 +50,11 @@ Research Notes:
 - Imbalance Handling: SMOTEC technique.
 - Missing Value Imputation: Merchant zip codes imputed based on previous transactions when available.
 
-Note Implemented:
+Note Implemented yet:
 
 - Experiment tracking
 - Scoring pipeline
 - Data drift analysis
-- Visualization
 - unit tests
 
 ## Setup
