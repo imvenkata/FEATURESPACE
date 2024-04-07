@@ -1,4 +1,6 @@
-This project focuses on building a robust fraud detection model using the CatBoost algorithm. It effectively handles categorical features, incorporates derived features, and utilizes strategic data splitting and SMOTE to address class imbalance.
+**Transaction Fraud Detection model**
+
+This project focuses on building a robust fraud detection model using the CatBoost algorithm.
 
 **Data:**
 
@@ -34,7 +36,8 @@ Derived / Calculated Features
 - merchant_risk_score: A calculated risk score for each merchant, potentially based on fraud rates.
 - zip_code_risk_score: A calculated risk score for each merchant zipcode, potentially based on fraud rates.
 
-Planed but note implemented: 
+Planed but note implemented:
+
 - distance between transaction location and the previous transaction location (approximate distance based on zipcodes)
 - Moving average of transaction frequency from the same account
 - Moving average of location difference between consecutive transactions from the same account
@@ -42,6 +45,7 @@ Planed but note implemented:
 - Feature hashing for categorical data
 
 Research Notes:
+
 - Feature Engineering
 - Model: CatBoost
 - Data Splitting:
