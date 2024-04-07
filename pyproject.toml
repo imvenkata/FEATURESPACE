@@ -13,8 +13,34 @@ plotly = "^5.20.0"
 nbformat = "^5.10.3"
 scikit-learn = "^1.4.1.post1"
 pydantic = "^2.6.4"
+imblearn = "^0.0"
+catboost = "^1.2.3"
 
 
+# -------------------------
+# folder as python library
+# -------------------------
+seaborn = "^0.13.2"
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "featurespace"
+version = "0.1.0"
+authors = [
+    {name = "venkata", email = "venkat2200@gmail.com"},
+]
+description = "Fraud transaction detection model"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["fraudmodel", "fraud"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 2 - Pre-Alpha",
+    "Natural Language :: English",
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["src*"]
