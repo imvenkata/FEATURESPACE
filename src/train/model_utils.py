@@ -16,7 +16,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.model_selection import GridSearchCV, StratifiedShuffleSplit
 
 from src.data.make_dataset import run_data_preparation
-from features.build_features import (
+from src.features.build_features import (
     extract_features,
     precalc_risk_scores,
 )
@@ -89,7 +89,9 @@ def prepare_data_for_modeling(
         ["merchant_risk_score", "zip_code_risk_score", "country_risk_score"]
     ] = test_features_data[
         ["merchant_risk_score", "zip_code_risk_score", "country_risk_score"]
-    ].fillna(0)
+    ].fillna(
+        0
+    )
 
     selected_columns = list(set(event_id + features + label))
     dev_features_data = dev_features_data[selected_columns]
