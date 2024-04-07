@@ -61,6 +61,29 @@ Note Implemented yet:
 - Data drift analysis
 - unit tests
 
+**Directory Structure**
+
+├── README.md
+├── data
+│ ├── precal
+│ ├── processed
+│ ├── raw
+├── models
+│ └── catboost_fraud_model.joblib
+├── notebooks
+│ └── example_usage.ipynb
+├── poetry.lock
+├── pyproject.toml
+├── requirements.txt
+├── setup.py
+├── src
+│ ├── config.py
+│ ├── data
+│ ├── features
+│ ├── main.py
+│ ├── tests
+│ └── train
+
 ## Setup
 
 - Install Python version 3.11.1
